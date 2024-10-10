@@ -1,6 +1,12 @@
+/* li 점 없애기 */
+ul {
+  list-style-type: none; /* li의 점 제거 */
+  padding-left: 0; /* 왼쪽 여백 제거 */
+}
+
+/* about 섹션 */
 #about {
   font-size: 120%;
-  
   width: 90%;
   margin: 0 auto;
   max-width: 960px;
@@ -13,34 +19,72 @@
   }
 }
 
+/* tech 섹션 */
 .tech {
   margin: 10px;
   flex: 1 1 0;
+  display: flex;
+  flex-direction: column; /* flex 요소를 세로로 배치 */
+  align-items: center; /* 기술 제목을 가운데 정렬 */
   h2, h3 {
     font-weight: 400;
   }
 }
 
+/* user 섹션 */
 .user {
   text-align: center;
   font-size: 60px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-wrap: wrap; /* 줄바꿈 허용 */
+  justify-content: space-between; /* 기술을 양 끝으로 정렬 */
   p {
     font-size: 16px;
   }
   @media only screen and (min-width: $cut) {
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; /* 큰 화면에서는 줄바꿈하지 않음 */
     font-size: 75px;
   }
 }
 
+/* user-details 섹션 */
 .user-details {
   text-align: center;
   margin: 5px auto;
   h1 {
     font-weight: 400;
   }
+}
+
+/* 스킬과 기술 요소의 마진 조정 */
+.user-details, .tech {
+  margin: 20px;
+}
+
+/* skill 요소 수정 - 한 줄에 두 개씩 */
+.skill {
+  display: flex;
+  flex-basis: 45%; /* 두 개씩 차지하도록 설정 */
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  margin-bottom: 20px;
+}
+
+/* skill 안의 svg 아이콘 크기 조정 */
+.skill svg {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+/* skill 안의 p 태그 마진 조정 */
+.skill p {
+  margin: 0;
+}
+
+.tech img {
+  width: 200px; /* 원하는 너비 설정 */
+  height: 150px; /* 원하는 높이 설정 */
+  object-fit: cover; /* 이미지 비율을 유지하면서 크기를 조정 */
 }
