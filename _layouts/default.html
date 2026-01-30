@@ -1,17 +1,67 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="../assets/css/devicon.min.css">
-<html lang="en">
+<html lang="ko">
   {% include head.html %}
   <body>
-      {% include header.html %}
-      <section id="about">
+    <!-- Split Hero Section -->
+    <section class="split-hero">
+      <!-- 왼쪽: 우주 배경 히어로 -->
+      <div class="split-left">
+        <div id="particles-js"></div>
+        <div class="split-left-content">
+          <p class="greeting">안녕하세요</p>
+          <h1 class="name">{{ site.username }}</h1>
+          <p class="role">{{ site.user_title }}</p>
+          <div class="social-icons">
+            {% if site.email %}
+            <a href="mailto:{{ site.email }}" class="social-icon"><i class="fa fa-envelope"></i></a>
+            {% endif %}
+            {% if site.github_username %}
+            <a href="https://github.com/{{ site.github_username }}" target="_blank" class="social-icon"><i class="fa fa-github"></i></a>
+            {% endif %}
+            {% if site.linkedin_username %}
+            <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="social-icon"><i class="fa fa-linkedin"></i></a>
+            {% endif %}
+          </div>
+          <a href="#about" class="scroll-down"><i class="fa fa-chevron-down"></i></a>
+        </div>
+      </div>
+
+      <!-- 오른쪽: 프로필 + 카드 -->
+      <div class="split-right">
         {% include about.html %}
-      </section>
-      <section id="projects">
-        {% include projects.html %}
-      </section>
-    
-      {{content}}
-      {% include footer.html %}
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      {% include projects.html %}
+    </section>
+
+    <!-- Skills Section -->
+    <section id="about">
+      {% include skills.html %}
+    </section>
+
+    {{content}}
+    {% include footer.html %}
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5, random: true },
+          size: { value: 3, random: true },
+          line_linked: { enable: false },
+          move: { enable: true, speed: 1, direction: "none", random: true, out_mode: "out" }
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: { onhover: { enable: false }, onclick: { enable: false }, resize: true }
+        }
+      });
+    </script>
   </body>
 </html>

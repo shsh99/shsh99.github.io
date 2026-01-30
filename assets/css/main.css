@@ -274,68 +274,19 @@ body::before {
   overflow: hidden;
 }
 
-/* 별 애니메이션 */
-.stars, .stars2, .stars3 {
+/* Particles.js */
+.split-left #particles-js {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
+  z-index: 0;
 }
 
-.stars {
-  background: transparent;
-  animation: twinkle 3s ease-in-out infinite;
-}
-
-.stars::after, .stars2::after, .stars3::after {
-  content: '';
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: white;
-  border-radius: 50%;
-  box-shadow:
-    50px 100px #fff, 150px 200px #fff, 250px 50px #fff, 350px 150px #fff,
-    450px 250px #fff, 100px 300px #fff, 200px 400px #fff, 300px 100px #fff,
-    400px 350px #fff, 500px 200px #fff, 50px 450px #fff, 150px 500px #fff,
-    250px 350px #fff, 350px 450px #fff, 450px 100px #fff, 550px 300px #fff,
-    650px 150px #fff, 750px 400px #fff, 850px 250px #fff, 950px 350px #fff,
-    100px 50px rgba(255,255,255,0.5), 200px 150px rgba(255,255,255,0.5),
-    300px 250px rgba(255,255,255,0.5), 400px 50px rgba(255,255,255,0.5),
-    500px 350px rgba(255,255,255,0.5), 600px 100px rgba(255,255,255,0.5),
-    700px 200px rgba(255,255,255,0.5), 800px 300px rgba(255,255,255,0.5);
-}
-
-.stars2::after {
-  width: 1px;
-  height: 1px;
-  box-shadow:
-    80px 120px rgba(255,255,255,0.6), 180px 220px rgba(255,255,255,0.6),
-    280px 80px rgba(255,255,255,0.6), 380px 180px rgba(255,255,255,0.6),
-    480px 280px rgba(255,255,255,0.6), 120px 320px rgba(255,255,255,0.6),
-    220px 420px rgba(255,255,255,0.6), 320px 120px rgba(255,255,255,0.6),
-    420px 380px rgba(255,255,255,0.6), 520px 220px rgba(255,255,255,0.6),
-    620px 320px rgba(255,255,255,0.6), 720px 120px rgba(255,255,255,0.6),
-    820px 420px rgba(255,255,255,0.6), 920px 180px rgba(255,255,255,0.6);
-  animation: twinkle 4s ease-in-out infinite 1s;
-}
-
-.stars3::after {
-  width: 3px;
-  height: 3px;
-  box-shadow:
-    120px 80px rgba(255,255,255,0.8), 320px 180px rgba(255,255,255,0.8),
-    520px 280px rgba(255,255,255,0.8), 220px 380px rgba(255,255,255,0.8),
-    420px 80px rgba(255,255,255,0.8), 620px 480px rgba(255,255,255,0.8),
-    820px 180px rgba(255,255,255,0.8), 720px 380px rgba(255,255,255,0.8);
-  animation: twinkle 5s ease-in-out infinite 2s;
-}
-
-@keyframes twinkle {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+.split-left #particles-js canvas {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .split-left-content {

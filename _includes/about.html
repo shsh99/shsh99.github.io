@@ -1,99 +1,30 @@
-<section class="split-hero">
-  <!-- 왼쪽: 우주 배경 + 이름 -->
-  <div class="split-left">
-    <div class="stars"></div>
-    <div class="stars2"></div>
-    <div class="stars3"></div>
-    <div class="split-left-content">
-      <p class="greeting">안녕하세요</p>
-      <h1 class="name">신동구</h1>
-      <p class="role">JAVA & SPRING 기반의 BACKEND ENGINEER</p>
-      <div class="social-icons">
-        <a href="mailto:ggg9905@naver.com" class="social-icon"><i class="fa fa-envelope"></i></a>
-        <a href="https://github.com/shsh99" target="_blank" class="social-icon"><i class="fa fa-github"></i></a>
-      </div>
-      <a href="#about-content" class="scroll-down">
-        <i class="fa fa-chevron-down"></i>
-      </a>
-    </div>
-  </div>
+<div class="profile-area">
+  <div class="profile-glow"></div>
+  <img src="https://avatars.githubusercontent.com/{{ site.github_username }}" alt="Profile" class="profile-img">
+  <h2>{{ site.username }}</h2>
+  <p class="subtitle">Backend Developer</p>
+  <p class="tagline">사용자의 입장에서 생각하는 개발자</p>
+</div>
 
-  <!-- 오른쪽: 프로필 + 카드 -->
-  <div class="split-right">
-    <div class="profile-area">
-      <div class="profile-glow"></div>
-      <img src="https://avatars.githubusercontent.com/shsh99" alt="Profile" class="profile-img">
-      <h2>신동구</h2>
-      <p class="subtitle">Backend Developer</p>
-      <p class="tagline">사용자의 입장에서 생각하는 개발자</p>
-      <div class="profile-buttons">
-        <a href="https://github.com/shsh99" target="_blank" class="btn-sm"><i class="fa fa-github"></i></a>
-        <a href="mailto:ggg9905@naver.com" class="btn-sm"><i class="fa fa-envelope"></i></a>
-      </div>
-    </div>
-
-    <div class="info-cards">
-      <div class="info-card">
-        <div class="card-icon"><i class="fa fa-code"></i></div>
-        <h3>개발 철학</h3>
-        <ul>
-          <li>최소한의 리소스로 최대한의 효과</li>
-          <li>성능보다 가독성을 우선시</li>
-          <li>주석 없이도 이해되는 코드</li>
-          <li>함께 성장하는 개발 문화</li>
-        </ul>
-      </div>
-      <div class="info-card">
-        <div class="card-icon"><i class="fa fa-rocket"></i></div>
-        <h3>관심 분야</h3>
-        <ul>
-          <li>CI/CD 파이프라인 구축</li>
-          <li>응답 속도 및 쿼리 최적화</li>
-          <li>클린 아키텍처 설계</li>
-          <li>테스트 자동화</li>
-        </ul>
-      </div>
-    </div>
+<div class="info-cards">
+  <div class="info-card">
+    <div class="card-icon"><i class="fa fa-code"></i></div>
+    <h3>개발 철학</h3>
+    <ul>
+      <li>최소한의 리소스로 최대한의 효과</li>
+      <li>성능보다 가독성을 우선시</li>
+      <li>주석 없이도 이해되는 코드</li>
+      <li>함께 성장하는 개발 문화</li>
+    </ul>
   </div>
-</section>
-
-<section id="about-content" class="skills-section">
-  <h2 class="section-title"><span class="gradient-text">Tech Stack</span></h2>
-  <div class="skills-grid">
-    <div class="skill-group">
-      <h4 class="skill-group-title">Backend</h4>
-      <div class="skill-items">
-        <div class="skill-item"><span class="skill-dot java"></span>Java</div>
-        <div class="skill-item"><span class="skill-dot spring"></span>Spring Boot</div>
-        <div class="skill-item"><span class="skill-dot spring"></span>Spring MVC</div>
-        <div class="skill-item"><span class="skill-dot spring"></span>Spring Security</div>
-        <div class="skill-item"><span class="skill-dot db"></span>JPA / MyBatis</div>
-      </div>
-    </div>
-    <div class="skill-group">
-      <h4 class="skill-group-title">Database</h4>
-      <div class="skill-items">
-        <div class="skill-item"><span class="skill-dot db"></span>MySQL</div>
-        <div class="skill-item"><span class="skill-dot db"></span>Oracle</div>
-        <div class="skill-item"><span class="skill-dot db"></span>Redis</div>
-      </div>
-    </div>
-    <div class="skill-group">
-      <h4 class="skill-group-title">Frontend</h4>
-      <div class="skill-items">
-        <div class="skill-item"><span class="skill-dot js"></span>JavaScript</div>
-        <div class="skill-item"><span class="skill-dot react"></span>React</div>
-        <div class="skill-item"><span class="skill-dot js"></span>HTML / CSS</div>
-      </div>
-    </div>
-    <div class="skill-group">
-      <h4 class="skill-group-title">DevOps</h4>
-      <div class="skill-items">
-        <div class="skill-item"><span class="skill-dot devops"></span>Git</div>
-        <div class="skill-item"><span class="skill-dot devops"></span>Docker</div>
-        <div class="skill-item"><span class="skill-dot devops"></span>AWS</div>
-        <div class="skill-item"><span class="skill-dot devops"></span>Linux</div>
-      </div>
-    </div>
+  <div class="info-card">
+    <div class="card-icon"><i class="fa fa-rocket"></i></div>
+    <h3>관심 분야</h3>
+    <ul>
+      <li>CI/CD 파이프라인 구축</li>
+      <li>응답 속도 및 쿼리 최적화</li>
+      <li>클린 아키텍처 설계</li>
+      <li>테스트 자동화</li>
+    </ul>
   </div>
-</section>
+</div>
