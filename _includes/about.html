@@ -1,30 +1,40 @@
-<div class="about-section">
-  <div class="about-container">
-    <div class="about-header">
-      <div class="profile-image-wrapper">
-        <div class="profile-glow"></div>
-        <img src="https://avatars.githubusercontent.com/shsh99" alt="Profile" class="profile-image">
+<section class="split-hero">
+  <!-- 왼쪽: 우주 배경 + 이름 -->
+  <div class="split-left">
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+    <div class="split-left-content">
+      <p class="greeting">안녕하세요</p>
+      <h1 class="name">신동구</h1>
+      <p class="role">JAVA & SPRING 기반의 BACKEND ENGINEER</p>
+      <div class="social-icons">
+        <a href="mailto:ggg9905@naver.com" class="social-icon"><i class="fa fa-envelope"></i></a>
+        <a href="https://github.com/shsh99" target="_blank" class="social-icon"><i class="fa fa-github"></i></a>
       </div>
-      <div class="about-intro">
-        <h1 class="gradient-text">신동구</h1>
-        <p class="role">Backend Developer</p>
-        <p class="tagline">사용자의 입장에서 생각하는 개발자</p>
-        <div class="social-links">
-          <a href="https://github.com/shsh99" target="_blank" class="social-btn">
-            <i class="fa fa-github"></i>
-          </a>
-          <a href="mailto:ggg9905@naver.com" class="social-btn">
-            <i class="fa fa-envelope"></i>
-          </a>
-        </div>
+      <a href="#about-content" class="scroll-down">
+        <i class="fa fa-chevron-down"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- 오른쪽: 프로필 + 카드 -->
+  <div class="split-right">
+    <div class="profile-area">
+      <div class="profile-glow"></div>
+      <img src="https://avatars.githubusercontent.com/shsh99" alt="Profile" class="profile-img">
+      <h2>신동구</h2>
+      <p class="subtitle">Backend Developer</p>
+      <p class="tagline">사용자의 입장에서 생각하는 개발자</p>
+      <div class="profile-buttons">
+        <a href="https://github.com/shsh99" target="_blank" class="btn-sm"><i class="fa fa-github"></i></a>
+        <a href="mailto:ggg9905@naver.com" class="btn-sm"><i class="fa fa-envelope"></i></a>
       </div>
     </div>
 
-    <div class="about-cards">
-      <div class="glass-card">
-        <div class="card-icon">
-          <i class="fa fa-code"></i>
-        </div>
+    <div class="info-cards">
+      <div class="info-card">
+        <div class="card-icon"><i class="fa fa-code"></i></div>
         <h3>개발 철학</h3>
         <ul>
           <li>최소한의 리소스로 최대한의 효과</li>
@@ -33,11 +43,8 @@
           <li>함께 성장하는 개발 문화</li>
         </ul>
       </div>
-
-      <div class="glass-card">
-        <div class="card-icon">
-          <i class="fa fa-rocket"></i>
-        </div>
+      <div class="info-card">
+        <div class="card-icon"><i class="fa fa-rocket"></i></div>
         <h3>관심 분야</h3>
         <ul>
           <li>CI/CD 파이프라인 구축</li>
@@ -48,52 +55,45 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="skills-section">
-  <h2 class="section-title">
-    <span class="gradient-text">Tech Stack</span>
-  </h2>
-
-  <div class="skills-container">
-    <div class="skill-category">
-      <h4>Backend</h4>
-      <div class="skill-tags">
-        <span class="skill-tag java">Java</span>
-        <span class="skill-tag spring">Spring Boot</span>
-        <span class="skill-tag spring">Spring MVC</span>
-        <span class="skill-tag spring">Spring Security</span>
-        <span class="skill-tag db">JPA</span>
-        <span class="skill-tag db">MyBatis</span>
+<section id="about-content" class="skills-section">
+  <h2 class="section-title"><span class="gradient-text">Tech Stack</span></h2>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <h4 class="skill-group-title">Backend</h4>
+      <div class="skill-items">
+        <div class="skill-item"><span class="skill-dot java"></span>Java</div>
+        <div class="skill-item"><span class="skill-dot spring"></span>Spring Boot</div>
+        <div class="skill-item"><span class="skill-dot spring"></span>Spring MVC</div>
+        <div class="skill-item"><span class="skill-dot spring"></span>Spring Security</div>
+        <div class="skill-item"><span class="skill-dot db"></span>JPA / MyBatis</div>
       </div>
     </div>
-
-    <div class="skill-category">
-      <h4>Database</h4>
-      <div class="skill-tags">
-        <span class="skill-tag db">MySQL</span>
-        <span class="skill-tag db">Oracle</span>
-        <span class="skill-tag db">Redis</span>
+    <div class="skill-group">
+      <h4 class="skill-group-title">Database</h4>
+      <div class="skill-items">
+        <div class="skill-item"><span class="skill-dot db"></span>MySQL</div>
+        <div class="skill-item"><span class="skill-dot db"></span>Oracle</div>
+        <div class="skill-item"><span class="skill-dot db"></span>Redis</div>
       </div>
     </div>
-
-    <div class="skill-category">
-      <h4>Frontend</h4>
-      <div class="skill-tags">
-        <span class="skill-tag js">JavaScript</span>
-        <span class="skill-tag react">React</span>
-        <span class="skill-tag js">HTML/CSS</span>
+    <div class="skill-group">
+      <h4 class="skill-group-title">Frontend</h4>
+      <div class="skill-items">
+        <div class="skill-item"><span class="skill-dot js"></span>JavaScript</div>
+        <div class="skill-item"><span class="skill-dot react"></span>React</div>
+        <div class="skill-item"><span class="skill-dot js"></span>HTML / CSS</div>
       </div>
     </div>
-
-    <div class="skill-category">
-      <h4>DevOps & Tools</h4>
-      <div class="skill-tags">
-        <span class="skill-tag devops">Git</span>
-        <span class="skill-tag devops">Docker</span>
-        <span class="skill-tag devops">AWS</span>
-        <span class="skill-tag devops">Linux</span>
+    <div class="skill-group">
+      <h4 class="skill-group-title">DevOps</h4>
+      <div class="skill-items">
+        <div class="skill-item"><span class="skill-dot devops"></span>Git</div>
+        <div class="skill-item"><span class="skill-dot devops"></span>Docker</div>
+        <div class="skill-item"><span class="skill-dot devops"></span>AWS</div>
+        <div class="skill-item"><span class="skill-dot devops"></span>Linux</div>
       </div>
     </div>
   </div>
-</div>
+</section>
