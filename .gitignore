@@ -3,3 +3,8 @@
 node_modules
 .vscode
 _site/
+vendor/
+.bundle/
+tmp/
+*.gem
+Gemfile.lock
