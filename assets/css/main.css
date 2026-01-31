@@ -1442,8 +1442,8 @@ body::before {
 .project-image .screen img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
+  object-fit: cover;
+  object-position: top center;
   transition: var(--transition);
 }
 
@@ -1473,7 +1473,7 @@ body::before {
 }
 
 .project-image .phone-frame .phone-screen {
-  background: #000;
+  background: #ffffff;
   border-radius: 18px;
   overflow: hidden;
   height: 180px;
@@ -1482,8 +1482,8 @@ body::before {
 .project-image .phone-frame .phone-screen img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  object-fit: contain;
+  object-position: center;
   transition: var(--transition);
 }
 
