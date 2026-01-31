@@ -1489,13 +1489,14 @@ body::before {
 .project-dropdown {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
+  transition: max-height 0.5s ease, padding 0.4s ease;
   background: rgba(20, 20, 40, 0.5);
   border-top: 1px solid transparent;
 }
 
 .project-card.active .project-dropdown {
-  max-height: 400px;
+  max-height: 1000px;
+  overflow-y: auto;
   border-top: 1px solid rgba(139, 92, 246, 0.2);
 }
 
