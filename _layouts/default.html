@@ -2,15 +2,15 @@
 <html lang="ko">
   {% include head.html %}
   <body>
-    <!-- Split Hero Section -->
-    <section class="split-hero">
-      <!-- 왼쪽: 우주 배경 히어로 -->
-      <div class="split-left">
+    <div class="portfolio-layout">
+      <!-- 왼쪽: 프로필 + 네비게이션 (고정) -->
+      <aside class="sidebar">
         <div id="particles-js"></div>
-        <div class="split-left-content">
+        <div class="sidebar-content">
           <p class="greeting">안녕하세요</p>
           <h1 class="name">{{ site.username }}</h1>
           <p class="role">{{ site.user_title }}</p>
+
           <div class="social-icons">
             {% if site.email %}
             <a href="mailto:{{ site.email }}" class="social-icon"><i class="fa fa-envelope"></i></a>
@@ -22,51 +22,144 @@
             <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="social-icon"><i class="fa fa-linkedin"></i></a>
             {% endif %}
           </div>
-          <a href="#about" class="scroll-down"><i class="fa fa-chevron-down"></i></a>
+
+          <!-- 네비게이션 메뉴 -->
+          <nav class="sidebar-nav">
+            <a href="#" class="nav-item active" data-section="about">
+              <i class="fa fa-user"></i>
+              <span>About</span>
+            </a>
+            <a href="#" class="nav-item" data-section="projects">
+              <i class="fa fa-folder-open"></i>
+              <span>Projects</span>
+            </a>
+            <a href="#" class="nav-item" data-section="skills">
+              <i class="fa fa-code"></i>
+              <span>Tech Stack</span>
+            </a>
+            <a href="#" class="nav-item" data-section="experience">
+              <i class="fa fa-briefcase"></i>
+              <span>Experience</span>
+            </a>
+            <a href="#" class="nav-item" data-section="education">
+              <i class="fa fa-graduation-cap"></i>
+              <span>Education</span>
+            </a>
+          </nav>
+
+          <!-- 스크롤 모드 토글 -->
+          <button class="scroll-mode-btn" onclick="toggleScrollMode()">
+            <i class="fa fa-arrows-v"></i>
+            <span>전체보기</span>
+          </button>
         </div>
-      </div>
+      </aside>
 
-      <!-- 오른쪽: 프로필 + 카드 -->
-      <div class="split-right">
-        {% include about.html %}
-      </div>
-    </section>
+      <!-- 오른쪽: 콘텐츠 영역 -->
+      <main class="main-content">
+        <!-- About Section -->
+        <section id="about" class="content-section active">
+          {% include about.html %}
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-      {% include projects.html %}
-    </section>
+        <!-- Projects Section -->
+        <section id="projects" class="content-section">
+          {% include projects.html %}
+        </section>
 
-    <!-- Skills Section -->
-    <section id="about">
-      {% include skills.html %}
-    </section>
+        <!-- Skills Section -->
+        <section id="skills" class="content-section">
+          {% include skills.html %}
+        </section>
 
-    <!-- Resume Section -->
-    <section id="resume">
-      {% include resume.html %}
-    </section>
+        <!-- Experience Section -->
+        <section id="experience" class="content-section">
+          {% include experience.html %}
+        </section>
 
-    {{content}}
-    {% include footer.html %}
+        <!-- Education Section -->
+        <section id="education" class="content-section">
+          {% include education.html %}
+        </section>
+
+        {{content}}
+      </main>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
       particlesJS("particles-js", {
         particles: {
-          number: { value: 80, density: { enable: true, value_area: 800 } },
+          number: { value: 60, density: { enable: true, value_area: 800 } },
           color: { value: "#ffffff" },
           shape: { type: "circle" },
           opacity: { value: 0.5, random: true },
-          size: { value: 3, random: true },
+          size: { value: 2, random: true },
           line_linked: { enable: false },
-          move: { enable: true, speed: 1, direction: "none", random: true, out_mode: "out" }
+          move: { enable: true, speed: 0.8, direction: "none", random: true, out_mode: "out" }
         },
         interactivity: {
           detect_on: "canvas",
           events: { onhover: { enable: false }, onclick: { enable: false }, resize: true }
         }
       });
+
+      let isScrollMode = false;
+
+      // 네비게이션 클릭 이벤트
+      document.querySelectorAll('.nav-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          const sectionId = item.dataset.section;
+
+          // 스크롤 모드면 해당 섹션으로 스크롤
+          if (isScrollMode) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+            return;
+          }
+
+          // 모든 nav-item에서 active 제거
+          document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+          // 클릭한 항목에 active 추가
+          item.classList.add('active');
+
+          // 모든 섹션 숨기기
+          document.querySelectorAll('.content-section').forEach(section => {
+            section.classList.remove('active');
+          });
+
+          // 선택한 섹션 표시
+          document.getElementById(sectionId).classList.add('active');
+        });
+      });
+
+      // 스크롤 모드 토글
+      function toggleScrollMode() {
+        isScrollMode = !isScrollMode;
+        const btn = document.querySelector('.scroll-mode-btn');
+        const mainContent = document.querySelector('.main-content');
+
+        if (isScrollMode) {
+          // 스크롤 모드: 모든 섹션 표시
+          document.querySelectorAll('.content-section').forEach(section => {
+            section.classList.add('active');
+          });
+          btn.innerHTML = '<i class="fa fa-th-large"></i><span>탭보기</span>';
+          btn.classList.add('active');
+          mainContent.classList.add('scroll-mode');
+        } else {
+          // 탭 모드: 첫 번째 섹션만 표시
+          document.querySelectorAll('.content-section').forEach(section => {
+            section.classList.remove('active');
+          });
+          document.getElementById('about').classList.add('active');
+          document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+          document.querySelector('.nav-item[data-section="about"]').classList.add('active');
+          btn.innerHTML = '<i class="fa fa-arrows-v"></i><span>전체보기</span>';
+          btn.classList.remove('active');
+          mainContent.classList.remove('scroll-mode');
+        }
+      }
     </script>
   </body>
 </html>
