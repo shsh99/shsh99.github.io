@@ -5,14 +5,11 @@
   <p class="section-subtitle">직접 기획하고 개발한 프로젝트들입니다</p>
 
   <div class="projects-grid">
-    <article class="project-card">
+    <!-- MZC LMS -->
+    <article class="project-card" onclick="toggleDropdown(this)">
       <div class="project-image">
         <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&h=400&fit=crop" alt="MZC LMS">
-        <div class="project-overlay">
-          <a href="https://github.com/shsh99/MZC_LMS" target="_blank" class="project-link">
-            <i class="fa fa-github"></i> View Code
-          </a>
-        </div>
+        <div class="project-badge">회사 내부 프로젝트</div>
       </div>
       <div class="project-content">
         <div class="project-tags">
@@ -20,19 +17,32 @@
           <span>JPA</span>
           <span>MySQL</span>
         </div>
-        <h3>MZC LMS 플랫폼</h3>
+        <h3>MZC LMS 플랫폼 <i class="fa fa-chevron-down dropdown-icon"></i></h3>
         <p>교육생과 강사를 위한 통합 학습 관리 시스템. 강의 수강, 과제 제출, 진도 관리 기능을 제공합니다.</p>
+      </div>
+      <div class="project-dropdown">
+        <div class="dropdown-content">
+          <div class="dropdown-section">
+            <h4><i class="fa fa-info-circle"></i> 프로젝트 개요</h4>
+            <p>메가존클라우드 사내 교육용 LMS 플랫폼 개발 프로젝트입니다.</p>
+          </div>
+          <div class="dropdown-section">
+            <h4><i class="fa fa-lock"></i> GitHub</h4>
+            <p class="internal-notice">회사 내부 프로젝트로 코드 공개가 불가합니다.</p>
+          </div>
+          <div class="dropdown-links">
+            <a href="https://shins99.notion.site/MZC-LMS-2f77b22f725180708757f5abb3544aee?pvs=74" target="_blank" class="dropdown-btn notion">
+              <i class="fa fa-file-text"></i> 상세 포트폴리오
+            </a>
+          </div>
+        </div>
       </div>
     </article>
 
-    <article class="project-card">
+    <!-- 취업로켓 -->
+    <article class="project-card" onclick="toggleDropdown(this)">
       <div class="project-image">
         <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&h=400&fit=crop" alt="취업로켓">
-        <div class="project-overlay">
-          <a href="https://github.com/shsh99/Job_Rocket" target="_blank" class="project-link">
-            <i class="fa fa-github"></i> View Code
-          </a>
-        </div>
       </div>
       <div class="project-content">
         <div class="project-tags">
@@ -40,19 +50,31 @@
           <span>React</span>
           <span>REST API</span>
         </div>
-        <h3>취업로켓</h3>
+        <h3>취업로켓 <i class="fa fa-chevron-down dropdown-icon"></i></h3>
         <p>구직자를 위한 맞춤형 취업 지원 플랫폼. 이력서 관리, 채용공고 매칭, 면접 일정 관리 기능을 제공합니다.</p>
+      </div>
+      <div class="project-dropdown">
+        <div class="dropdown-content">
+          <div class="dropdown-section">
+            <h4><i class="fa fa-info-circle"></i> 프로젝트 개요</h4>
+            <p>구직자와 기업을 연결하는 취업 플랫폼으로, AI 기반 이력서 분석 및 맞춤 채용공고 추천 기능을 제공합니다.</p>
+          </div>
+          <div class="dropdown-links">
+            <a href="https://github.com/employment-rocket" target="_blank" class="dropdown-btn github">
+              <i class="fa fa-github"></i> GitHub
+            </a>
+            <a href="https://shins99.notion.site/28d7b22f7251806599acde8739ac943d" target="_blank" class="dropdown-btn notion">
+              <i class="fa fa-file-text"></i> 상세 포트폴리오
+            </a>
+          </div>
+        </div>
       </div>
     </article>
 
-    <article class="project-card">
+    <!-- Eco Furniture -->
+    <article class="project-card" onclick="toggleDropdown(this)">
       <div class="project-image">
         <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=400&fit=crop" alt="Eco Furniture">
-        <div class="project-overlay">
-          <a href="https://github.com/shsh99/Furniture_Mall_Project" target="_blank" class="project-link">
-            <i class="fa fa-github"></i> View Code
-          </a>
-        </div>
       </div>
       <div class="project-content">
         <div class="project-tags">
@@ -60,19 +82,28 @@
           <span>Spring</span>
           <span>Oracle</span>
         </div>
-        <h3>Eco Furniture</h3>
+        <h3>Eco Furniture <i class="fa fa-chevron-down dropdown-icon"></i></h3>
         <p>친환경 가구 이커머스 플랫폼. 상품 검색, 장바구니, 결제 시스템을 구현했습니다.</p>
+      </div>
+      <div class="project-dropdown">
+        <div class="dropdown-content">
+          <div class="dropdown-section">
+            <h4><i class="fa fa-info-circle"></i> 프로젝트 개요</h4>
+            <p>지속 가능한 친환경 가구를 판매하는 이커머스 플랫폼입니다. 상품 관리, 주문/결제, 리뷰 시스템을 구현했습니다.</p>
+          </div>
+          <div class="dropdown-links">
+            <a href="https://github.com/shsh99/Furniture_Mall_Project" target="_blank" class="dropdown-btn github">
+              <i class="fa fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
       </div>
     </article>
 
-    <article class="project-card">
+    <!-- Zzimccong Plan -->
+    <article class="project-card" onclick="toggleDropdown(this)">
       <div class="project-image">
         <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop" alt="Zzimccong">
-        <div class="project-overlay">
-          <a href="https://github.com/zzimccong" target="_blank" class="project-link">
-            <i class="fa fa-github"></i> View Code
-          </a>
-        </div>
       </div>
       <div class="project-content">
         <div class="project-tags">
@@ -80,9 +111,48 @@
           <span>React</span>
           <span>AWS</span>
         </div>
-        <h3>Zzimccong Plan</h3>
-        <p>기업 고객을 위한 맞집 예약 서비스. 단체 예약, 법인카드 결제 연동 기능을 제공합니다.</p>
+        <h3>Zzimccong Plan <i class="fa fa-chevron-down dropdown-icon"></i></h3>
+        <p>기업 고객을 위한 맛집 예약 서비스. 단체 예약, 법인카드 결제 연동 기능을 제공합니다.</p>
+      </div>
+      <div class="project-dropdown">
+        <div class="dropdown-content">
+          <div class="dropdown-section">
+            <h4><i class="fa fa-info-circle"></i> 프로젝트 개요</h4>
+            <p>기업 회식 및 단체 모임을 위한 맛집 예약 플랫폼입니다. 실시간 예약, 법인카드 결제, 리뷰 관리 기능을 제공합니다.</p>
+          </div>
+          <div class="dropdown-links">
+            <a href="https://github.com/zzimccong" target="_blank" class="dropdown-btn github">
+              <i class="fa fa-github"></i> GitHub
+            </a>
+            <a href="https://shins99.notion.site/13e7b22f7251808d89a3fe2a58b4cd31" target="_blank" class="dropdown-btn notion">
+              <i class="fa fa-file-text"></i> 상세 포트폴리오
+            </a>
+          </div>
+        </div>
       </div>
     </article>
   </div>
 </div>
+
+<script>
+function toggleDropdown(card) {
+  const wasActive = card.classList.contains('active');
+
+  // 다른 모든 카드 닫기
+  document.querySelectorAll('.project-card').forEach(c => {
+    c.classList.remove('active');
+  });
+
+  // 클릭한 카드 토글
+  if (!wasActive) {
+    card.classList.add('active');
+  }
+}
+
+// 드롭다운 내부 링크 클릭 시 이벤트 버블링 방지
+document.querySelectorAll('.dropdown-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+});
+</script>
