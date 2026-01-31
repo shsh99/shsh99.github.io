@@ -1376,9 +1376,9 @@ body::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
   background: linear-gradient(145deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
-  height: 230px;
+  min-height: 180px;
   overflow: visible;
 }
 
@@ -1435,15 +1435,13 @@ body::before {
   background: #000;
   border-radius: 4px;
   overflow: hidden;
-  height: 140px;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .project-image .screen img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  height: auto;
+  display: block;
   transition: var(--transition);
 }
 
