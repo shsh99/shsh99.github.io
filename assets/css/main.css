@@ -1377,7 +1377,7 @@ body::before {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background: #ffffff;
+  background: linear-gradient(145deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
   min-height: 180px;
   overflow: visible;
 }
