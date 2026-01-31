@@ -29,21 +29,21 @@
               <i class="fa fa-user"></i>
               <span>About</span>
             </a>
-            <a href="#" class="nav-item" data-section="projects">
-              <i class="fa fa-folder-open"></i>
-              <span>Projects</span>
-            </a>
             <a href="#" class="nav-item" data-section="skills">
               <i class="fa fa-code"></i>
               <span>Tech Stack</span>
+            </a>
+            <a href="#" class="nav-item" data-section="education">
+              <i class="fa fa-graduation-cap"></i>
+              <span>Education</span>
             </a>
             <a href="#" class="nav-item" data-section="experience">
               <i class="fa fa-briefcase"></i>
               <span>Experience</span>
             </a>
-            <a href="#" class="nav-item" data-section="education">
-              <i class="fa fa-graduation-cap"></i>
-              <span>Education</span>
+            <a href="#" class="nav-item" data-section="projects">
+              <i class="fa fa-folder-open"></i>
+              <span>Projects</span>
             </a>
           </nav>
 
@@ -57,29 +57,29 @@
 
       <!-- 오른쪽: 콘텐츠 영역 -->
       <main class="main-content">
-        <!-- About Section -->
+        <!-- About Section (자기소개) -->
         <section id="about" class="content-section active">
           {% include about.html %}
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="content-section">
-          {% include projects.html %}
-        </section>
-
-        <!-- Skills Section -->
+        <!-- Skills Section (기술 스택) -->
         <section id="skills" class="content-section">
           {% include skills.html %}
         </section>
 
-        <!-- Experience Section -->
+        <!-- Education Section (교육 이력) -->
+        <section id="education" class="content-section">
+          {% include education.html %}
+        </section>
+
+        <!-- Experience Section (경력) -->
         <section id="experience" class="content-section">
           {% include experience.html %}
         </section>
 
-        <!-- Education Section -->
-        <section id="education" class="content-section">
-          {% include education.html %}
+        <!-- Projects Section (포트폴리오) -->
+        <section id="projects" class="content-section">
+          {% include projects.html %}
         </section>
 
         {{content}}
