@@ -1358,8 +1358,9 @@ body::before {
 }
 
 .project-card {
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
   border-radius: 20px;
   overflow: hidden;
   transition: var(--transition);
@@ -1376,7 +1377,7 @@ body::before {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background: linear-gradient(145deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
+  background: #ffffff;
   min-height: 180px;
   overflow: visible;
 }
@@ -1571,11 +1572,11 @@ body::before {
   font-weight: 700;
   margin: 0 0 10px 0;
   padding: 0;
-  color: #1a1a2e;
+  color: var(--text-primary);
 }
 
 .project-content p {
-  color: #555;
+  color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
@@ -1594,7 +1595,7 @@ body::before {
   font-size: 0.8rem;
   margin-left: 8px;
   transition: transform 0.3s ease;
-  color: #888;
+  color: var(--text-muted);
 }
 
 .project-card.active .dropdown-icon {
