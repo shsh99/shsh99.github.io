@@ -31,42 +31,38 @@
 
   <!-- 핵심 역량 -->
   <h3 class="subsection-title">핵심 역량</h3>
-  <div class="competency-grid">
-    <div class="competency-card">
-      <div class="competency-icon"><i class="fa fa-cubes"></i></div>
-      <h4>멀티테넌트 SaaS 아키텍처</h4>
-      <p>3단계 데이터 격리 구조 설계<br><span class="dim">도메인 식별 → JWT 검증 → Row-level 필터링</span></p>
-      <div class="competency-metric">
-        <span class="metric-value">6계층</span>
-        <span class="metric-label">RBAC 권한 체계</span>
+  <div class="competency-rows">
+    <div class="competency-row">
+      <div class="comp-icon"><i class="fa fa-cubes"></i></div>
+      <div class="comp-body">
+        <h4>멀티테넌트 SaaS 아키텍처</h4>
+        <p>3단계 데이터 격리 설계 (도메인 식별 → JWT 검증 → Row-level 필터링)</p>
       </div>
+      <div class="comp-badge">6계층 RBAC</div>
     </div>
-    <div class="competency-card">
-      <div class="competency-icon"><i class="fa fa-lock"></i></div>
-      <h4>동시성 제어 & 데이터 무결성</h4>
-      <p>Redis 분산락 기반 중복 예약 방지<br><span class="dim">추첨 이벤트 데이터 정합성 확보</span></p>
-      <div class="competency-metric">
-        <span class="metric-value">500건+</span>
-        <span class="metric-label">동시 요청 안정 처리 (30ms)</span>
+    <div class="competency-row">
+      <div class="comp-icon"><i class="fa fa-lock"></i></div>
+      <div class="comp-body">
+        <h4>동시성 제어 & 데이터 무결성</h4>
+        <p>Redis 분산락 기반 중복 예약 방지, 추첨 이벤트 데이터 정합성 확보</p>
       </div>
+      <div class="comp-badge">500건+ / 30ms</div>
     </div>
-    <div class="competency-card">
-      <div class="competency-icon"><i class="fa fa-database"></i></div>
-      <h4>Polyglot Persistence</h4>
-      <p>MySQL + MongoDB 이중 저장소 설계<br><span class="dim">비정형 템플릿 + 정형 데이터 분리</span></p>
-      <div class="competency-metric">
-        <span class="metric-value">30%</span>
-        <span class="metric-label">템플릿 로딩 속도 개선</span>
+    <div class="competency-row">
+      <div class="comp-icon"><i class="fa fa-database"></i></div>
+      <div class="comp-body">
+        <h4>Polyglot Persistence</h4>
+        <p>MySQL + MongoDB 이중 저장소 설계, 비정형 템플릿과 정형 데이터 분리</p>
       </div>
+      <div class="comp-badge">로딩 30%↑</div>
     </div>
-    <div class="competency-card">
-      <div class="competency-icon"><i class="fa fa-users"></i></div>
-      <h4>분산팀 개발 표준화</h4>
-      <p>LLM 기반 '맥도날드 시스템' 구축<br><span class="dim">컨텍스트 문서 + 프롬프트 템플릿 + CI/CD</span></p>
-      <div class="competency-metric">
-        <span class="metric-value">70%</span>
-        <span class="metric-label">컨벤션 위반 감소</span>
+    <div class="competency-row">
+      <div class="comp-icon"><i class="fa fa-users"></i></div>
+      <div class="comp-body">
+        <h4>분산팀 개발 표준화</h4>
+        <p>LLM 기반 '맥도날드 시스템' — 컨텍스트 문서 + 프롬프트 템플릿 + CI/CD</p>
       </div>
+      <div class="comp-badge">위반 70%↓</div>
     </div>
   </div>
 </div>
