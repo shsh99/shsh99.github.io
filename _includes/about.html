@@ -31,38 +31,46 @@
 
   <!-- 핵심 역량 -->
   <h3 class="subsection-title">핵심 역량</h3>
-  <div class="competency-rows">
-    <div class="competency-row">
-      <div class="comp-icon"><i class="fa fa-cubes"></i></div>
-      <div class="comp-body">
+  <div class="competency-grid">
+    <div class="comp-card">
+      <div class="comp-top">
+        <div class="comp-icon"><i class="fa fa-cubes"></i></div>
         <h4>멀티테넌트 SaaS 아키텍처</h4>
-        <p>3단계 데이터 격리 설계 (도메인 식별 → JWT 검증 → Row-level 필터링)</p>
       </div>
-      <div class="comp-badge">6계층 RBAC</div>
+      <p>B2C/B2B를 단일 시스템으로 지원하는 3단계 데이터 격리 구조를 설계하고, 테넌트 간 완벽한 격리를 달성했습니다.</p>
+      <div class="comp-highlight">
+        <span class="comp-num">6계층</span> RBAC 권한 체계
+      </div>
     </div>
-    <div class="competency-row">
-      <div class="comp-icon"><i class="fa fa-lock"></i></div>
-      <div class="comp-body">
+    <div class="comp-card">
+      <div class="comp-top">
+        <div class="comp-icon"><i class="fa fa-lock"></i></div>
         <h4>동시성 제어 & 데이터 무결성</h4>
-        <p>Redis 분산락 기반 중복 예약 방지, 추첨 이벤트 데이터 정합성 확보</p>
       </div>
-      <div class="comp-badge">500건+ / 30ms</div>
+      <p>Redis 분산락으로 중복 예약을 방지하고, DB 부하를 80% 감소시켜 추첨 이벤트의 데이터 정합성을 확보했습니다.</p>
+      <div class="comp-highlight">
+        <span class="comp-num">500건+</span> 동시 요청 안정 처리 (30ms)
+      </div>
     </div>
-    <div class="competency-row">
-      <div class="comp-icon"><i class="fa fa-database"></i></div>
-      <div class="comp-body">
+    <div class="comp-card">
+      <div class="comp-top">
+        <div class="comp-icon"><i class="fa fa-database"></i></div>
         <h4>Polyglot Persistence</h4>
-        <p>MySQL + MongoDB 이중 저장소 설계, 비정형 템플릿과 정형 데이터 분리</p>
       </div>
-      <div class="comp-badge">로딩 30%↑</div>
+      <p>비정형 템플릿과 정형 데이터를 효율적으로 관리하기 위해 MySQL + MongoDB 이중 저장소 아키텍처를 설계했습니다.</p>
+      <div class="comp-highlight">
+        <span class="comp-num">30%</span> 템플릿 로딩 속도 개선
+      </div>
     </div>
-    <div class="competency-row">
-      <div class="comp-icon"><i class="fa fa-users"></i></div>
-      <div class="comp-body">
+    <div class="comp-card">
+      <div class="comp-top">
+        <div class="comp-icon"><i class="fa fa-users"></i></div>
         <h4>분산팀 개발 표준화</h4>
-        <p>LLM 기반 '맥도날드 시스템' — 컨텍스트 문서 + 프롬프트 템플릿 + CI/CD</p>
       </div>
-      <div class="comp-badge">위반 70%↓</div>
+      <p>7인 분산팀에서 LLM 활용 시 코드 품질 편차를 줄이기 위해 '맥도날드 시스템'과 CI/CD 파이프라인을 구축했습니다.</p>
+      <div class="comp-highlight">
+        <span class="comp-num">70%</span> 컨벤션 위반 감소
+      </div>
     </div>
   </div>
 </div>
