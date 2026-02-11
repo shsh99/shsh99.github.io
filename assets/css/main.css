@@ -594,15 +594,6 @@ body::before {
   margin: 0;
 }
 
-.subsection-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin: 40px 0 20px 0;
-  padding-left: 12px;
-  border-left: 3px solid var(--accent-purple);
-}
-
 @media (max-width: 600px) {
   .profile-header {
     flex-direction: column;
@@ -1775,6 +1766,97 @@ body::before {
 
 .about-item a:hover {
   color: var(--accent-purple);
+}
+
+/* Profile desc-sub */
+.profile-info .desc-sub {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin: 8px 0 0 0;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Competency Section */
+.subsection-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 40px 0 20px 0;
+  padding-left: 12px;
+  border-left: 3px solid var(--accent-purple);
+}
+
+.competency-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.competency-item {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  padding: 22px 24px;
+  transition: var(--transition);
+}
+
+.competency-item:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.1);
+}
+
+.competency-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.competency-header .card-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-primary);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.competency-header .card-icon i {
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.competency-header h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.competency-item p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .competency-item {
+    padding: 18px 16px;
+  }
+
+  .competency-header h4 {
+    font-size: 0.93rem;
+  }
+
+  .competency-item p {
+    font-size: 0.84rem;
+  }
 }
 
 /* Timeline */
