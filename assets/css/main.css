@@ -1195,7 +1195,6 @@ body::before {
   position: absolute;
   left: 0;
   color: var(--accent-purple);
-}
   margin: 0;
 }
 
@@ -1331,25 +1330,19 @@ body::before {
 
 .skill-tags {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .skill-tag {
-  padding: 6px 0;
-  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.88rem;
   font-weight: 400;
+  background: rgba(255, 255, 255, 0.06);
   color: rgba(255, 255, 255, 0.75);
   cursor: default;
-  position: relative;
-}
-
-.skill-tag::before {
-  content: '•';
-  color: rgba(139, 92, 246, 0.5);
-  margin-right: 8px;
-  font-size: 0.7rem;
-  vertical-align: middle;
+  user-select: none;
 }
 
 .ai-card {
