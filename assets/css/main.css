@@ -285,6 +285,58 @@ ul {
   color: #334155;
 }
 
+:root[data-theme="light"] .profile-info .desc-sub,
+:root[data-theme="light"] .about-item span,
+:root[data-theme="light"] .about-item a,
+:root[data-theme="light"] .comp-list li,
+:root[data-theme="light"] .timeline-subtitle,
+:root[data-theme="light"] .responsibility,
+:root[data-theme="light"] .problem-section li,
+:root[data-theme="light"] .module-table td,
+:root[data-theme="light"] .timeline-tags span,
+:root[data-theme="light"] .timeline-details li,
+:root[data-theme="light"] .timeline-content > ul li,
+:root[data-theme="light"] .scope-badge {
+  color: #334155;
+}
+
+:root[data-theme="light"] .about-item {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(124, 58, 237, 0.14);
+  box-shadow: 0 10px 24px rgba(148, 163, 184, 0.12);
+}
+
+:root[data-theme="light"] .timeline-content {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(124, 58, 237, 0.16);
+  box-shadow: 0 16px 32px rgba(148, 163, 184, 0.14);
+}
+
+:root[data-theme="light"] .scope-badge,
+:root[data-theme="light"] .timeline-tags span {
+  background: rgba(226, 232, 240, 0.72);
+  border-color: rgba(148, 163, 184, 0.26);
+}
+
+:root[data-theme="light"] .responsibility {
+  background: rgba(248, 250, 252, 0.92);
+}
+
+:root[data-theme="light"] .problem-section {
+  background: rgba(248, 250, 252, 0.88);
+  border-color: rgba(148, 163, 184, 0.16);
+}
+
+:root[data-theme="light"] .module-table td {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(148, 163, 184, 0.22);
+}
+
+:root[data-theme="light"] .timeline-details li strong,
+:root[data-theme="light"] .timeline-content > ul li strong {
+  color: #b45309;
+}
+
 :root[data-theme="light"] .dropdown-btn.github {
   background: rgba(15, 23, 42, 0.06);
   color: #0f172a;
