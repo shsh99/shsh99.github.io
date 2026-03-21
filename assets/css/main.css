@@ -2044,19 +2044,11 @@ body::before {
 .project-card:nth-child(2) { animation-delay: 0.2s; }
 .project-card:nth-child(3) { animation-delay: 0.3s; }
 .project-card:nth-child(4) { animation-delay: 0.4s; }
-.ongoing-projects-section{width:90%;max-width:960px;margin:0 auto;text-align:left}
-@media only screen and (min-width:768px){.ongoing-projects-section{width:80%}}
-.ongoing-projects-grid{display:grid;gap:24px;margin-top:32px}
-.ongoing-project-card{background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(245,250,255,.96));border:1px solid rgba(59,130,246,.14);border-radius:24px;box-shadow:0 18px 50px rgba(15,23,42,.08);padding:28px}
-.ongoing-project-header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:16px}
-.ongoing-project-header h3{margin:0;font-size:1.6rem;color:#0f172a}
-.ongoing-badge{display:inline-flex;align-items:center;padding:8px 14px;border-radius:999px;background:linear-gradient(135deg,#0ea5e9,#f97316);color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-.ongoing-summary{margin:0 0 18px;color:#334155;font-size:1rem;line-height:1.8}
-.ongoing-points{list-style:none;padding:0;margin:0 0 24px}
-.ongoing-points li{position:relative;padding-left:18px;margin-bottom:12px;color:#475569;line-height:1.7}
-.ongoing-points li:before{content:"";position:absolute;left:0;top:11px;width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,#0ea5e9,#f97316)}
-.ongoing-links{display:flex;flex-wrap:wrap;gap:12px}
-@media only screen and (max-width:767px){.ongoing-project-card{padding:22px 18px}.ongoing-project-header h3{font-size:1.35rem}}
+.ongoing-project-hero{min-height:180px;background:linear-gradient(145deg,#0f0f1a 0%,#151b36 50%,#1d2847 100%)}
+.ongoing-project-mark{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:28px 24px;min-width:220px;border-radius:24px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);box-shadow:0 18px 40px rgba(0,0,0,.28)}
+.ongoing-project-mark i{font-size:2rem;color:#c4b5fd}
+.ongoing-project-mark span{font-size:1.05rem;font-weight:800;letter-spacing:.18em;color:#f8fafc}
+@media only screen and (max-width:767px){.ongoing-project-mark{min-width:180px;padding:22px 18px}.ongoing-project-mark span{font-size:.9rem;letter-spacing:.12em}}
 
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 480px) {
