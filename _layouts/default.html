@@ -8,6 +8,10 @@
         <div id="particles-js"></div>
         <div class="sidebar-content">
           <div class="sidebar-profile">
+            <button class="theme-toggle-btn theme-toggle-floating" onclick="toggleTheme()">
+              <i class="fa fa-sun-o"></i>
+              <span>라이트모드</span>
+            </button>
             <img src="https://avatars.githubusercontent.com/{{ site.github_username }}" alt="Profile" class="sidebar-avatar">
             <p class="greeting">안녕하세요</p>
             <h1 class="name">{{ site.username }}</h1>
@@ -149,7 +153,7 @@
       }
 
       function updateThemeToggleButton(theme) {
-        const button = document.querySelector('.theme-toggle-btn');
+        const button = document.querySelector('.theme-toggle-floating');
         if (!button) return;
 
         if (theme === 'light') {
