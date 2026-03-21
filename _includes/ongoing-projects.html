@@ -1,96 +1,58 @@
-<div class="projects-section ongoing-projects-view">
+<div class="ongoing-projects-section">
   <h2 class="section-title">
     <span class="gradient-text">진행중인 프로젝트</span>
   </h2>
   <p class="section-subtitle">현재 직접 진행 중인 프로젝트입니다</p>
 
-  <div class="projects-grid">
-    <article class="project-card" onclick="toggleDropdown(this)">
-      <div class="project-image no-frame ongoing-project-hero">
-        <div class="ongoing-project-mark">
-          <i class="fa fa-sliders"></i>
-          <span>LLM CONTROL</span>
-        </div>
+  <div class="ongoing-projects-grid">
+    <article class="ongoing-project-card">
+      <div class="ongoing-project-header">
+        <span class="ongoing-badge">In Progress</span>
+        <h3>LLM Engineering Control</h3>
       </div>
-      <div class="project-content">
-        <div class="project-tags">
-          <span>Java 21</span>
-          <span>Spring Boot</span>
-          <span>React</span>
-          <span>TypeScript</span>
-        </div>
-        <h3>LLM Engineering Control <i class="fa fa-chevron-down dropdown-icon"></i></h3>
-        <p>프롬프트 중심 방식과 구조화된 컨텍스트 중심 방식을 같은 제품 범위에서 비교 검증하는 LLM 엔지니어링 실험 프로젝트</p>
-      </div>
-      <div class="project-dropdown">
-        <div class="dropdown-content">
-          <div class="dropdown-section">
-            <h4><i class="fa fa-bullseye"></i> 핵심 방향</h4>
-            <p>환각 감소, 재작업 감소, 일관성 향상 같은 품질 지표를 기준으로 두 접근 방식을 비교하고 검증합니다.</p>
-          </div>
-          <div class="dropdown-section">
-            <h4><i class="fa fa-cubes"></i> 구조</h4>
-            <p>Codex 실험용 모노레포 구조이며 백엔드는 Java 21, Spring Boot, 프론트엔드는 React와 TypeScript 기반으로 구성됩니다.</p>
-          </div>
-          <div class="dropdown-section">
-            <h4><i class="fa fa-random"></i> 진행 방식</h4>
-            <p>프롬프트 저장소와 컨텍스트 저장소를 분리해 동일 범위를 서로 다른 가이드 방식으로 구현하고 결과를 비교합니다.</p>
-          </div>
-          <div class="dropdown-links">
-            <a href="https://github.com/LLM-Engineering-Control" target="_blank" class="dropdown-btn github">
-              <i class="fa fa-github"></i> GitHub Org
-            </a>
-            <a href="https://github.com/LLM-Engineering-Control/llm-control-prompt" target="_blank" class="dropdown-btn notion">
-              <i class="fa fa-code"></i> Prompt Repo
-            </a>
-            <a href="https://github.com/LLM-Engineering-Control/llm-control-context" target="_blank" class="dropdown-btn pdf">
-              <i class="fa fa-sitemap"></i> Context Repo
-            </a>
-          </div>
-        </div>
+      <p class="ongoing-summary">
+        같은 제품 범위를 기준으로 프롬프트 중심 접근과 구조화된 컨텍스트 중심 접근을 각각 구현하고,
+        환각 감소, 재작업 감소, 일관성 향상 같은 품질 지표를 비교하는 LLM 엔지니어링 실험 프로젝트입니다.
+      </p>
+      <ul class="ongoing-points">
+        <li>Codex 실험용 모노레포 구조로 백엔드는 Java 21, Spring Boot를 사용합니다.</li>
+        <li>프론트엔드는 React와 TypeScript 기반으로 구성되어 있습니다.</li>
+        <li>프롬프트 저장소와 컨텍스트 저장소를 나눠 동일 범위를 다른 가이드 방식으로 검증합니다.</li>
+      </ul>
+      <div class="ongoing-links">
+        <a href="https://github.com/LLM-Engineering-Control" target="_blank" class="dropdown-btn github">
+          <i class="fa fa-github"></i> GitHub Org
+        </a>
+        <a href="https://github.com/LLM-Engineering-Control/llm-control-prompt" target="_blank" class="dropdown-btn notion">
+          <i class="fa fa-code"></i> Prompt Repo
+        </a>
+        <a href="https://github.com/LLM-Engineering-Control/llm-control-context" target="_blank" class="dropdown-btn pdf">
+          <i class="fa fa-sitemap"></i> Context Repo
+        </a>
       </div>
     </article>
 
-    <article class="project-card" onclick="toggleDropdown(this)">
-      <div class="project-image no-frame ongoing-project-hero">
-        <div class="ongoing-project-mark">
-          <i class="fa fa-magic"></i>
-          <span>AI ALL IN ONE</span>
-        </div>
+    <article class="ongoing-project-card">
+      <div class="ongoing-project-header">
+        <span class="ongoing-badge">In Progress</span>
+        <h3>AI All In One Site</h3>
       </div>
-      <div class="project-content">
-        <div class="project-tags">
-          <span>React</span>
-          <span>TypeScript</span>
-          <span>Vite</span>
-          <span>Workflow UI</span>
-        </div>
-        <h3>AI All In One Site <i class="fa fa-chevron-down dropdown-icon"></i></h3>
-        <p>한국어 중심 이미지 프롬프트 작성부터 업로드, 비디오 생성 흐름까지 하나로 묶는 올인원 AI 제작 워크플로우 프로젝트</p>
-      </div>
-      <div class="project-dropdown">
-        <div class="dropdown-content">
-          <div class="dropdown-section">
-            <h4><i class="fa fa-lightbulb-o"></i> 핵심 방향</h4>
-            <p>한국어 사용자가 이미지 생성과 비디오 제작 흐름을 한 제품 안에서 자연스럽게 이어서 사용할 수 있도록 설계합니다.</p>
-          </div>
-          <div class="dropdown-section">
-            <h4><i class="fa fa-columns"></i> 사용자 흐름</h4>
-            <p>이미지 탭에서 시작한 입력을 구조화된 템플릿 확장, 이미지 선택 또는 업로드, 비디오 생성 단계까지 연결합니다.</p>
-          </div>
-          <div class="dropdown-section">
-            <h4><i class="fa fa-flag-checkered"></i> 현재 상태</h4>
-            <p>UI와 프롬프트 흐름은 구현되어 있고, 실제 모델 API 연동이 다음 단계로 남아 있습니다.</p>
-          </div>
-          <div class="dropdown-links">
-            <a href="https://github.com/ai-all-in-one-site" target="_blank" class="dropdown-btn github">
-              <i class="fa fa-github"></i> GitHub Org
-            </a>
-            <a href="https://github.com/ai-all-in-one-site/all-in-one-site" target="_blank" class="dropdown-btn notion">
-              <i class="fa fa-code"></i> Main Repo
-            </a>
-          </div>
-        </div>
+      <p class="ongoing-summary">
+        한국어 중심으로 이미지 프롬프트 작성, 구조화된 템플릿 확장, 이미지 업로드, 비디오 생성 흐름까지
+        하나의 제품 안에서 이어지도록 설계한 올인원 AI 제작 워크플로우 프로젝트입니다.
+      </p>
+      <ul class="ongoing-points">
+        <li>React, TypeScript, Vite 기반으로 UI와 프롬프트 플로우를 빠르게 구현하고 있습니다.</li>
+        <li>이미지 탭에서 시작한 입력을 비디오 생성 단계까지 연결하는 사용 흐름을 설계합니다.</li>
+        <li>현재 UI와 프롬프트 흐름은 구현되어 있고, 실제 모델 API 연동이 다음 단계입니다.</li>
+      </ul>
+      <div class="ongoing-links">
+        <a href="https://github.com/ai-all-in-one-site" target="_blank" class="dropdown-btn github">
+          <i class="fa fa-github"></i> GitHub Org
+        </a>
+        <a href="https://github.com/ai-all-in-one-site/all-in-one-site" target="_blank" class="dropdown-btn notion">
+          <i class="fa fa-code"></i> Main Repo
+        </a>
       </div>
     </article>
   </div>

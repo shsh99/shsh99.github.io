@@ -68,6 +68,10 @@
             <i class="fa fa-arrows-v"></i>
             <span>전체보기</span>
           </button>
+          <button class="theme-toggle-btn" onclick="toggleTheme()">
+            <i class="fa fa-sun-o"></i>
+            <span>라이트모드</span>
+          </button>
         </div>
       </aside>
 
@@ -108,23 +112,68 @@
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-      particlesJS("particles-js", {
-        particles: {
-          number: { value: 60, density: { enable: true, value_area: 800 } },
-          color: { value: "#ffffff" },
-          shape: { type: "circle" },
-          opacity: { value: 0.5, random: true },
-          size: { value: 2, random: true },
-          line_linked: { enable: false },
-          move: { enable: true, speed: 0.8, direction: "none", random: true, out_mode: "out" }
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: { onhover: { enable: false }, onclick: { enable: false }, resize: true }
-        }
-      });
-
       let isScrollMode = false;
+      const THEME_STORAGE_KEY = 'portfolio-theme';
+
+      function initParticles(theme) {
+        const container = document.getElementById('particles-js');
+        if (!container || typeof particlesJS === 'undefined') return;
+
+        if (window.pJSDom && window.pJSDom.length) {
+          window.pJSDom.forEach(instance => {
+            if (instance.pJS && instance.pJS.fn && instance.pJS.fn.vendors && instance.pJS.fn.vendors.destroypJS) {
+              instance.pJS.fn.vendors.destroypJS();
+            }
+          });
+          window.pJSDom = [];
+        }
+
+        container.innerHTML = '';
+        const isLight = theme === 'light';
+
+        particlesJS("particles-js", {
+          particles: {
+            number: { value: 60, density: { enable: true, value_area: 800 } },
+            color: { value: isLight ? "#475569" : "#ffffff" },
+            shape: { type: "circle" },
+            opacity: { value: isLight ? 0.25 : 0.5, random: true },
+            size: { value: 2, random: true },
+            line_linked: { enable: false },
+            move: { enable: true, speed: 0.8, direction: "none", random: true, out_mode: "out" }
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: { onhover: { enable: false }, onclick: { enable: false }, resize: true }
+          }
+        });
+      }
+
+      function updateThemeToggleButton(theme) {
+        const button = document.querySelector('.theme-toggle-btn');
+        if (!button) return;
+
+        if (theme === 'light') {
+          button.innerHTML = '<i class="fa fa-moon-o"></i><span>다크모드</span>';
+          button.classList.add('light-active');
+        } else {
+          button.innerHTML = '<i class="fa fa-sun-o"></i><span>라이트모드</span>';
+          button.classList.remove('light-active');
+        }
+      }
+
+      function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem(THEME_STORAGE_KEY, theme);
+        updateThemeToggleButton(theme);
+        initParticles(theme);
+      }
+
+      function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+      }
+
+      applyTheme(localStorage.getItem(THEME_STORAGE_KEY) || 'dark');
 
       // 네비게이션 클릭 이벤트
       document.querySelectorAll('.nav-item').forEach(item => {
