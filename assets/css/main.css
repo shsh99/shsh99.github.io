@@ -208,15 +208,15 @@ ul {
 :root[data-theme="light"] .info-card,
 :root[data-theme="light"] .project-card,
 :root[data-theme="light"] .ongoing-project-card {
-  background: rgba(255, 255, 255, 0.82);
-  border-color: rgba(148, 163, 184, 0.22);
-  box-shadow: 0 14px 35px rgba(148, 163, 184, 0.16);
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(100, 116, 139, 0.24);
+  box-shadow: 0 14px 35px rgba(148, 163, 184, 0.18);
 }
 
 :root[data-theme="light"] .detail-card:hover,
 :root[data-theme="light"] .info-card:hover,
 :root[data-theme="light"] .project-card:hover {
-  box-shadow: 0 20px 40px rgba(148, 163, 184, 0.22);
+  box-shadow: 0 20px 40px rgba(148, 163, 184, 0.26);
 }
 
 :root[data-theme="light"] .info-card.highlight-card {
@@ -256,7 +256,7 @@ ul {
 :root[data-theme="light"] .skill-table td,
 :root[data-theme="light"] .detail-card li,
 :root[data-theme="light"] .glass-card li {
-  color: var(--text-secondary);
+  color: #334155;
 }
 
 :root[data-theme="light"] .project-tags span {
@@ -266,6 +266,46 @@ ul {
 
 :root[data-theme="light"] .btn-outline {
   background: rgba(255, 255, 255, 0.7);
+}
+
+:root[data-theme="light"] .section-subtitle,
+:root[data-theme="light"] .profile-area .tagline,
+:root[data-theme="light"] .profile-info .desc,
+:root[data-theme="light"] .hero-desc,
+:root[data-theme="light"] .stat-label,
+:root[data-theme="light"] .internal-notice {
+  color: #475569 !important;
+}
+
+:root[data-theme="light"] .detail-card li,
+:root[data-theme="light"] .info-card li,
+:root[data-theme="light"] .project-content p,
+:root[data-theme="light"] .ongoing-summary,
+:root[data-theme="light"] .ongoing-points li {
+  color: #334155;
+}
+
+:root[data-theme="light"] .dropdown-btn.github {
+  background: rgba(15, 23, 42, 0.06);
+  color: #0f172a;
+  border-color: rgba(100, 116, 139, 0.24);
+}
+
+:root[data-theme="light"] .dropdown-btn.notion {
+  background: rgba(124, 58, 237, 0.1);
+  color: #5b21b6;
+}
+
+:root[data-theme="light"] .dropdown-btn.pdf {
+  background: rgba(219, 39, 119, 0.1);
+  color: #be185d;
+}
+
+:root[data-theme="light"] .sidebar-content .name {
+  background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 50%, #db2777 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 :root[data-theme="light"] .sidebar-avatar,
@@ -628,16 +668,18 @@ body::before {
 
 .sidebar-profile {
   position: relative;
+  padding-top: 34px;
 }
 
 .theme-toggle-floating {
   position: absolute;
-  top: -6px;
-  right: 0;
+  top: -2px;
+  right: -6px;
   width: auto;
   margin-top: 0;
   padding: 10px 14px;
   z-index: 3;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
 }
 
 /* 스크롤 모드 스타일 */
@@ -694,8 +736,8 @@ body::before {
   }
 
   .theme-toggle-floating {
-    top: -4px;
-    right: 0;
+    top: 0;
+    right: -2px;
     padding: 8px 12px;
   }
 
