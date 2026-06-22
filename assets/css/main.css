@@ -2365,3 +2365,95 @@ body::before {
     padding: 20px;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -48px;
+  z-index: 1000;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.18);
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 16px;
+}
+
+.nav-item,
+.scroll-mode-btn,
+.theme-toggle-btn,
+.dropdown-btn {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-item:focus-visible,
+.scroll-mode-btn:focus-visible,
+.theme-toggle-btn:focus-visible,
+.dropdown-btn:focus-visible,
+.project-card:focus-visible {
+  outline: 3px solid #60a5fa;
+  outline-offset: 3px;
+}
+
+.nav-item,
+.scroll-mode-btn,
+.theme-toggle-btn,
+.dropdown-btn,
+.project-card {
+  touch-action: manipulation;
+}
+
+.content-section,
+.section-inner,
+.project-card,
+.ongoing-project-card {
+  scroll-margin-top: 24px;
+}
+
+.project-card[role="button"] {
+  cursor: pointer;
+}
+
+.project-card[role="button"]:focus-visible {
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.35);
+}
+
+@media (max-width: 900px) {
+  .sidebar-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .nav-item {
+    justify-content: center;
+    min-width: 0;
+    padding: 10px 12px;
+    text-align: center;
+  }
+
+  .nav-item span {
+    display: inline;
+    font-size: 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

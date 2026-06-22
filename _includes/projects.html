@@ -6,7 +6,7 @@
 
   <div class="projects-grid">
     <!-- MZC LMS -->
-    <article class="project-card" onclick="toggleDropdown(this)">
+    <article class="project-card" tabindex="0" role="button" aria-expanded="false" onclick="toggleDropdown(this)">
       <div class="project-image">
         <div class="monitor-frame">
           <div class="screen">
@@ -70,7 +70,7 @@
     </article>
 
     <!-- 취업로켓 -->
-    <article class="project-card" onclick="toggleDropdown(this)">
+    <article class="project-card" tabindex="0" role="button" aria-expanded="false" onclick="toggleDropdown(this)">
       <div class="project-image">
         <div class="monitor-frame">
           <div class="screen">
@@ -124,7 +124,7 @@
     </article>
 
     <!-- Zzimccong Plan -->
-    <article class="project-card" onclick="toggleDropdown(this)">
+    <article class="project-card" tabindex="0" role="button" aria-expanded="false" onclick="toggleDropdown(this)">
       <div class="project-image">
         <div class="phone-frame">
           <div class="phone-screen">
@@ -189,13 +189,25 @@ function toggleDropdown(card) {
   // 다른 모든 카드 닫기
   document.querySelectorAll('.project-card').forEach(c => {
     c.classList.remove('active');
+    c.setAttribute('aria-expanded', 'false');
   });
 
   // 클릭한 카드 토글
   if (!wasActive) {
     card.classList.add('active');
+    card.setAttribute('aria-expanded', 'true');
   }
 }
+
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const target = e.target;
+    if (target && (target.closest('.dropdown-btn') || target.closest('a'))) return;
+    e.preventDefault();
+    toggleDropdown(card);
+  });
+});
 
 // 드롭다운 내부 링크 클릭 시 이벤트 버블링 방지
 document.querySelectorAll('.dropdown-btn').forEach(btn => {
